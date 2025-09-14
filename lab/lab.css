@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    background: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+}
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+.navbar {
+    background: #fff;
+    border-bottom: 1px solid #eff0f4;
+    padding: 0;
+}
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-brand .logo {
+    color: #138ffb;
+    font-weight: bold;
+    font-size: 1.21rem;
+    line-height: 1.2;
+    letter-spacing: -.02em;
+}
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 90px;
+    line-height: 90px;
+}
+.nav-menu li {
+    margin-right: 18px;
+}
+.nav-menu li a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    padding: 8px 4px;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+.nav-menu li a.active,
+.nav-menu li a:hover {
+    color: #138ffb;
+}
+.search-bar {
+    padding: 8px 12px;
+    border-radius: 3px;
+    border: 1px solid #bde1fd;
+    background: #f7fbfd;
+    font-size: 15px;
+    width: 240px;
+    margin-right: 8px;
+}
+.search-btn,
+.login-btn {
+    font-size: 15px;
+    padding: 6px 18px;
+    margin-right: 7px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f2f4f8;
+    color: #222;
+    cursor: pointer;
+}
+.login-btn {
+    background-color: #138ffb;
+    color: #fff;
+    font-weight: 600;
+}
+.main-content {
+    padding-top: 34px;
+    padding-bottom: 26px;
+}
+.labs-title {
+    color: #138ffb;
+    font-size: 2.1rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.labs-subtitle {
+    font-size: 1.17rem;
+    margin-top: 36px;
+    margin-bottom: 13px;
+    font-weight: bold;
+    color: #222;
+}
+.facilities-grid {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+.facility-card {
+    background: #fcfdff;
+    border: 1px solid #eff0f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(47,92,138,0.04);
+    flex: 1 1 310px;
+    min-width: 260px;
+    max-width: 320px;
+    padding: 24px 18px 20px 18px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
+.facility-icon {
+    font-size: 2.5rem;
+    color: #138ffb;
+    margin-bottom: 11px;
+}
+.facility-card h3 {
+    font-size: 1.08rem;
+    margin: 0 0 7px 0;
+    color: #222;
+}
+.facility-card p {
+    color: #4d5e6a;
+    font-size: 0.98rem;
+    margin: 0 0 7px 0;
+}
+.lab-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    background: #fff;
+    font-size: 1rem;
+}
+.lab-table th,
+.lab-table td {
+    border: 1px solid #eff0f4;
+    padding: 12px 8px;
+    text-align: center;
+    font-weight: 500;
+}
+.lab-table th {
+    background: #f7fbfd;
+    color: #138ffb;
+}
+.lab-table td {
+    background: #fcfdff;
+    color: #222;
+}
+.table-scroll {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 28px;
+}
+.safety-box {
+    background: #fcfdff;
+    border: 1px solid #eff0f4;
+    border-radius: 10px;
+    padding: 22px 22px 18px 22px;
+    margin-top: 18px;
+    max-width: 700px;
+}
+.safety-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 9px;
+}
+.safety-icon {
+    color: #ed8500;
+    font-size: 1.6rem;
+    margin-right: 8px;
+}
+.safety-title {
+    font-size: 1.11rem;
+    font-weight: bold;
+    color: #ed8500;
+}
+.safety-box ul {
+    margin: 0;
+    padding-left: 1.15em;
+    color: #305066;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+.footer {
+    background: #f5f8fa;
+    border-top: 1px solid #e6e8ec;
+    padding: 14px 0;
+    text-align: center;
+    margin-top: 32px;
+}
+.footer-content span {
+    font-size: 1rem;
+    color: #5d6d7e;
+    margin-right: 19px;
+    margin-left: 10px;
+    font-weight: 500;
+}
+@media (max-width:900px) {
+    .facilities-grid {
+        flex-direction: column;
+    }
+    .main-content,
+    .container {
+        padding: 0 8px;
+    }
+}

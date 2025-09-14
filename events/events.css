@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #fff;
+  color: #222;
+  line-height: 1.6;
+}
+
+header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: #0077cc;
+}
+
+nav a {
+  color: #333;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #0077cc;
+}
+
+.main-title {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1a3f8b;
+}
+
+.calendar-container {
+  width: 80%;
+  margin: 0 auto 30px auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  background: #fafafa;
+}
+
+.calendar-container h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.calendar-container h3 {
+  text-align: center;
+}
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 15px;
+  padding: 0 85px;
+}
+
+.dayname {
+  font-weight: 600;
+  text-align: center;
+  color: #555;
+}
+.day {
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  background: #f4f4f4;
+  height: 70px;
+  line-height: 70px;
+}
+.active-day {
+  background: #0077cc;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.calendar-footer {
+  margin: 30px 0;
+  text-align: right;
+  padding-right: 55px;
+}
+
+.calendar-footer a {
+  color: #0077cc;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.events {
+  width: 80%;
+  margin: 0 auto 40px auto;
+}
+
+.events h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  background: #f8f9fc;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+.event-card h4 {
+  margin: 10px 0;
+  color: #222;
+}
+
+.event-date {
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: #0077cc;
+  width: 18%;
+  padding: 3px;
+  text-align: center;
+  color: #fff;
+}
+
+.event-date span {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.event-meta {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 4px 0;
+}
+
+.event-card a {
+  font-size: 0.85rem;
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.event-card a:hover {
+  text-decoration: underline;
+}
+.event-card a{
+  text-decoration: none;
+}
+
+.events a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+footer {
+  background: #f7f7f7;
+  padding: 20px 5%;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  font-size: 0.85rem;
+  color: #444;
+}

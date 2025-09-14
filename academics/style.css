@@ -14,61 +14,110 @@ body {
 /* Navbar */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  background: #f9f9f9;
-  border-bottom: 1px solid #ddd;
+  justify-content: space-between;
+  background: #00264d;
+  padding: 15px 8%;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .logo {
+  font-size: 20px;
   font-weight: 700;
-  font-size: 18px;
+  color: #fff;
 }
 
 .logo-icon {
-  background: #007bff;
-  color: #fff;
+  background: #ffcc00;
+  color: #00264d;
   padding: 4px 8px;
-  margin-right: 5px;
-  border-radius: 3px;
+  border-radius: 5px;
+  margin-right: 6px;
 }
 
-.navbar nav a {
-  margin: 0 8px;
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: #fff;
   text-decoration: none;
-  color: #333;
-  font-size: 14px;
-  transition: color 0.3s;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.navbar nav a:hover,
-.navbar nav a.active {
-  color: #007bff;
-  font-weight: bold;
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #004080;
+  min-width: 180px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  margin: 0;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background: #ffcc00;
+  color: #00264d;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 .nav-actions {
   display: flex;
-  gap: 10px;
+  align-items: center;
 }
 
 .nav-actions input {
-  padding: 5px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
 }
 
 .login-btn {
-  background: #007bff;
+  background: #ffcc00;
+  color: #00264d;
   border: none;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 4px;
+  padding: 7px 15px;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #e6b800;
 }
 
 /* Contact Section */

@@ -6,147 +6,51 @@
   <title>IT Department</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-    }
-
-    /* Navbar */
-    header.navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #004080;
-      padding: 10px 20px;
-      color: #fff;
-    }
-
-    .logo {
-      font-weight: 700;
-      font-size: 18px;
-    }
-    .logo-icon {
-      background: #fff;
-      color: #004080;
-      font-weight: bold;
-      padding: 4px 8px;
-      border-radius: 4px;
-      margin-right: 6px;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 15px;
-    }
-    nav ul li {
-      position: relative;
-    }
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px;
-      display: block;
-    }
-    nav ul li a:hover {
-      background: #0066cc;
-      border-radius: 4px;
-    }
-
-    /* Dropdown */
-    nav ul li ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #004080;
-      min-width: 180px;
-      flex-direction: column;
-      z-index: 1000;
-    }
-    nav ul li:hover ul {
-      display: flex;
-    }
-    nav ul li ul li a {
-      padding: 10px 14px;
-    }
-    nav ul li ul li a:hover {
-      background: #0066cc;
-    }
-
-    /* Search + Login */
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .nav-actions input {
-      padding: 6px 10px;
-      border-radius: 4px;
-      border: none;
-    }
-    .login-btn {
-      background: #ffcc00;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: 600;
-    }
-  </style>
 </head>
 <body>
-  <!-- Navbar -->
+  <!-- ========== NAVBAR ========== -->
   <header class="navbar">
-    <div class="logo"> 
-      <span class="logo-icon">IT</span> INFORMATION TECHNOLOGY 
+    <div class="logo">
+      <span class="logo-icon">IT</span> INFORMATION TECHNOLOGY
     </div>
-
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-
-        <li>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li class="dropdown">
           <a href="#">Academics ▾</a>
-          <ul>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="labs.html">Labs</a></li>
-            <li><a href="faculty-profiles.html">Faculty Profiles</a></li>
-            <li><a href="timetable.html">Timetable</a></li>
+          <ul class="dropdown-menu">
             <li><a href="curriculum.html">Curriculum</a></li>
+            <li><a href="timetable.html">Timetable</a></li>
+            <li><a href="faculty.html">Faculty Profiles</a></li>
+            <li><a href="labs.html">Labs</a></li>
+            <li><a href="projects.html">Projects</a></li>
           </ul>
         </li>
-
-        <li>
+        <li class="dropdown">
           <a href="#">Research ▾</a>
-          <ul>
+          <ul class="dropdown-menu">
             <li><a href="publications.html">Publications</a></li>
+            <li><a href="research.html">Research Centers</a></li>
           </ul>
         </li>
-
-        <li>
-          <a href="#">Students Life ▾</a>
-          <ul>
-            <li><a href="placement.html">Placement</a></li>
-            <li><a href="internship.html">Internship</a></li>
+        <li class="dropdown">
+          <a href="#">Student Life ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="placements.html">Placements</a></li>
+            <li><a href="internships.html">Internships</a></li>
           </ul>
         </li>
-
         <li><a href="resources.html">Resources</a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
-
     <div class="nav-actions">
       <input type="text" placeholder="Search the IT Department...">
       <button class="login-btn">Login</button>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- ========== HERO ========== -->
   <section class="hero">
     <div class="hero-text">
       <h1>IT Department</h1>
@@ -165,7 +69,7 @@
     </div>
   </section>
 
-  <!-- Vision & Mission -->
+  <!-- ========== VISION & MISSION ========== -->
   <section class="vision-mission">
     <div class="card">
       <h3>VISION</h3>
@@ -185,7 +89,7 @@
     </div>
   </section>
 
-  <!-- Quick Access -->
+  <!-- ========== QUICK ACCESS ========== -->
   <section class="quick-access">
     <h2>Quick Access</h2>
     <div class="access-grid">
@@ -196,7 +100,7 @@
     </div>
   </section>
 
-  <!-- Announcements -->
+  <!-- ========== ANNOUNCEMENTS ========== -->
   <section class="announcements">
     <h2>Latest Announcements</h2>
     <div class="announcement-grid">
@@ -221,7 +125,7 @@
     </div>
   </section>
 
-  <!-- Highlights -->
+  <!-- ========== HIGHLIGHTS ========== -->
   <section class="highlights">
     <h2>Department Highlights</h2>
     <div class="highlight-grid">
@@ -248,9 +152,52 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ========== FOOTER ========== -->
   <footer class="footer">
-    <p>© 2024 IT Connect. All rights reserved.</p>
+    <div class="footer-container">
+      <!-- About -->
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Welcome to Our College – where innovation meets excellence. We strive to empower students through quality education, research, and holistic development.</p>
+      </div>
+
+      <!-- Academics -->
+      <div class="footer-section">
+        <h3>Academics</h3>
+        <ul>
+          <li><a href="curriculum.html">Curriculum</a></li>
+          <li><a href="timetable.html">Timetable</a></li>
+          <li><a href="faculty.html">Faculty Profiles</a></li>
+          <li><a href="labs.html">Labs</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </div>
+
+      <!-- Research -->
+      <div class="footer-section">
+        <h3>Research</h3>
+        <ul>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="research.html">Research Centers</a></li>
+          <li><a href="collaborations.html">Collaborations</a></li>
+        </ul>
+      </div>
+
+      <!-- Student Life -->
+      <div class="footer-section">
+        <h3>Student Life</h3>
+        <ul>
+          <li><a href="placements.html">Placements</a></li>
+          <li><a href="internships.html">Internships</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="clubs.html">Clubs & Societies</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 IT Department. All Rights Reserved.</p>
+    </div>
   </footer>
 </body>
 </html>

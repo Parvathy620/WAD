@@ -1,4 +1,4 @@
-/* Global Reset */
+/* ========== GLOBAL RESET ========== */
 * {
   margin: 0;
   padding: 0;
@@ -6,23 +6,24 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.6;
   background: #f9f9f9;
   color: #333;
 }
 
-/* Navbar */
+/* ========== NAVBAR ========== */
 header.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #004080;
+  background: linear-gradient(90deg, #004d99, #0066cc);
   padding: 12px 30px;
   color: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -30,7 +31,7 @@ header.navbar {
   font-size: 18px;
 }
 .logo-icon {
-  background: #fff;
+  background: #ffdd57;
   color: #004080;
   font-weight: bold;
   padding: 4px 8px;
@@ -38,71 +39,95 @@ header.navbar {
   margin-right: 6px;
 }
 
-/* Nav Links */
+/* NAV LINKS */
 nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
 }
-
 nav ul li {
   position: relative;
 }
-
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 8px 12px;
-  display: block;
+  padding: 10px 16px;
   font-weight: 500;
-  transition: 0.3s;
+  position: relative;
+  transition: color 0.3s ease;
 }
-
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  left: 50%;
+  bottom: 5px;
+  background: #ffdd57;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
 nav ul li a:hover {
-  background: #0066cc;
-  border-radius: 4px;
+  color: #ffdd57;
+}
+nav ul li a:hover::after {
+  width: 60%;
 }
 
-/* Dropdown */
+/* DROPDOWNS */
 nav ul li ul {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 45px;
   left: 0;
-  background: #004080;
+  background: #ffffff;
+  min-width: 200px;
+  border-radius: 8px;
   flex-direction: column;
-  min-width: 180px;
-  border-radius: 0 0 6px 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
-
 nav ul li:hover ul {
   display: flex;
+  animation: fadeIn 0.3s ease-in-out;
 }
-
 nav ul li ul li a {
-  padding: 10px 14px;
-  white-space: nowrap;
+  padding: 12px 20px;
+  color: #333;
+  background: white;
+  transition: all 0.3s ease;
 }
-
 nav ul li ul li a:hover {
   background: #0066cc;
+  color: white;
+  padding-left: 30px;
 }
 
-/* Search + Login */
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SEARCH + LOGIN */
 .nav-actions {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
 .nav-actions input {
   padding: 6px 10px;
   border-radius: 4px;
   border: none;
   outline: none;
 }
-
 .login-btn {
   background: #ffcc00;
   border: none;
@@ -116,7 +141,7 @@ nav ul li ul li a:hover {
   background: #e6b800;
 }
 
-/* Hero Section */
+/* ========== HERO SECTION ========== */
 .hero {
   display: flex;
   align-items: center;
@@ -124,13 +149,13 @@ nav ul li ul li a:hover {
   padding: 60px 10%;
   background: linear-gradient(to right, #f0f6ff, #ffffff);
 }
-
 .hero-text {
   max-width: 50%;
 }
 .hero-text h1 {
   font-size: 42px;
   color: #004080;
+  animation: fadeInUp 1s ease;
 }
 .hero-text h2 {
   font-size: 26px;
@@ -151,22 +176,24 @@ nav ul li ul li a:hover {
   cursor: pointer;
   margin-right: 10px;
   font-weight: 600;
+  transition: all 0.3s ease;
 }
 .btn.primary {
   background: #004080;
   color: #fff;
 }
 .btn:hover {
-  opacity: 0.9;
+  transform: scale(1.05);
+  background: #0066cc;
+  color: #fff;
 }
-
 .hero-img img {
   width: 450px;
   border-radius: 8px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Vision & Mission */
+/* ========== VISION & MISSION ========== */
 .vision-mission {
   display: flex;
   justify-content: center;
@@ -177,15 +204,19 @@ nav ul li ul li a:hover {
   background: #fff;
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   flex: 1;
+  transition: transform 0.3s ease;
+}
+.vision-mission .card:hover {
+  transform: translateY(-5px);
 }
 .vision-mission h3 {
   color: #004080;
   margin-bottom: 12px;
 }
 
-/* Quick Access */
+/* ========== QUICK ACCESS ========== */
 .quick-access {
   padding: 60px 10%;
   text-align: center;
@@ -201,17 +232,22 @@ nav ul li ul li a:hover {
 }
 .access-card {
   background: #fff;
-  padding: 20px;
+  padding: 25px;
   border-radius: 8px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease, background 0.3s;
+}
+.access-card:hover {
+  transform: translateY(-8px);
+  background: #f0f8ff;
 }
 .access-card h4 {
   margin-top: 10px;
   color: #0066cc;
 }
 
-/* Announcements */
+/* ========== ANNOUNCEMENTS ========== */
 .announcements {
   padding: 60px 10%;
 }
@@ -228,7 +264,11 @@ nav ul li ul li a:hover {
   background: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.announcement:hover {
+  transform: scale(1.03);
 }
 .announcement .tag {
   display: inline-block;
@@ -249,9 +289,13 @@ nav ul li ul li a:hover {
   color: #004080;
   text-decoration: none;
   font-weight: 600;
+  transition: 0.3s;
+}
+.announcement a:hover {
+  color: #ff9900;
 }
 
-/* Highlights */
+/* ========== HIGHLIGHTS ========== */
 .highlights {
   padding: 60px 10%;
 }
@@ -269,8 +313,12 @@ nav ul li ul li a:hover {
   background: #fff;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease;
+}
+.highlight:hover {
+  transform: translateY(-8px);
 }
 .highlight img {
   width: 100%;
@@ -281,11 +329,23 @@ nav ul li ul li a:hover {
   color: #0066cc;
 }
 
-/* Footer */
+/* ========== FOOTER ========== */
 .footer {
   text-align: center;
   background: #004080;
   color: #fff;
   padding: 20px;
   margin-top: 40px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

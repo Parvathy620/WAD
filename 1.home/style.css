@@ -178,6 +178,7 @@ body {
 .hero-img img {
   max-width: 450px;
   border-radius: 12px;
+  display: cover;
 }
 
 /* ===========================

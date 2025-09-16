@@ -25,7 +25,7 @@ The project is organized into different sections, each managed by a designated t
 
 ## Deployment
 The website is deployed using GitHub Pages. 
-   . The website will be available at: https://your-username.github.io/department-website
+   . The website will be available at: https://wad.github.io/department-website
 
 ## Contributing
 1. Fork the repository
